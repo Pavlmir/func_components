@@ -5,13 +5,20 @@ function App() {
   const [value2, setValue2] = useState("");
 
   const increment = () => {
-    setValue2(value2 + "q")
+    setCount(count + 1)
+  }
+   
+  const decrement = () => {
+    setCount(count - 1)
   }
 
   return (
     <div className="App">
-      <button onClick={() => setCount(count + 1)}>Int {count}</button>
-      <button onClick={increment}>Sring {value2}</button>
+      <button onClick={() => setValue2(value2 + "q")}>String - {value2}</button>
+      <span></span>
+      <button onClick={increment}>+</button>
+      <span>{count}</span>
+      <button onClick={decrement}>-</button>
     </div>
   );
 }
